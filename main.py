@@ -16,11 +16,14 @@ response = requests.get( url )
 content = response.json()
 
 # ---------- Generate Email Message ---------- #
-email_message = "Hello testing 123"
+email_message = ""
+
+for article in content["articles"]:
+    email_message = email_message + f"{article["title"]}:\n{article["description"]} - {article["url"]}\n\n"
 
 # ---------- Setup mailing list ---------- #
 mailing_list = ["pensiveeagle.dev@gmail.com"]
 
 # ---------- Send email ---------- #
-# for receiver in mailing_list:
-#     send_email( message = email_message, sender_addr = "pensiveeagle.dev@gmail.com", sender_pass = email_sender_pass, receiver_addr = receiver)
+for receiver in mailing_list:
+    send_email( message = email_message, sender_addr = "pensiveeagle.dev@gmail.com", sender_pass = email_sender_pass, receiver_addr = receiver)
