@@ -22,9 +22,9 @@ content = response.json()
 email_message = ""
 
 for article in content["articles"]:
-    if article["title"] is None:
+    if article["title"] is None or article["title"] == "":
         continue
-    if article["description"] is None:
+    if article["description"] is None or article["description"] == "":
         continue
     email_message = email_message + f"{article["title"]}:\n{article["description"]} - {article["url"]}\n\n"
     
