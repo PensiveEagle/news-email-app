@@ -12,3 +12,4 @@ content = response.json()
 
 for article in content["articles"]:
     print( article["title"] )
+    print( article["description"] )
