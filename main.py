@@ -16,7 +16,16 @@ response = requests.get( url )
 content = response.json()
 
 # ---------- Generate Email Message ---------- #
-email_message = "Hello testing 123"
+email_message = ""
+
+for article in content["articles"]:
+    if article["title"] is None:
+        continue
+    if article["description"] is None:
+        continue
+    email_message = email_message + f"{article["title"]}:\n{article["description"]} - {article["url"]}\n\n"
+    
+email_message = email_message.encode("utf-8")
 
 # ---------- Setup mailing list ---------- #
 mailing_list = ["pensiveeagle.dev@gmail.com"]
