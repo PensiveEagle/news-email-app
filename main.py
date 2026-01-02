@@ -10,17 +10,18 @@ api_key = os.getenv( "API_KEY" )
 email_sender_pass = os.getenv( "GOOGLE_APP_PASSWORD" )
 
 # ---------- Set API query parameters ---------- #
+topic = "dinosaur"
 language = "en"
 articles = 20
 
 # ---------- Make API request ---------- #
-url = f"https://newsapi.org/v2/everything?q=tesla&from=2025-12-02&sortBy=publishedAt&language={language}&pageSize={articles}&apiKey={api_key}"
+url = f"https://newsapi.org/v2/everything?q={topic.replace(" ", "+")}&from=2025-12-02&sortBy=publishedAt&language={language}&pageSize={articles}&apiKey={api_key}"
 
 response = requests.get( url )
 content = response.json()
 
 # ---------- Generate Email Message ---------- #
-email_message = "Subject: Today's News \n"
+email_message = f"Subject: Today's {topic.title()} News \n"
 
 for article in content["articles"]:
     if article["title"] is None or article["title"] == "":
