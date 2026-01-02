@@ -22,5 +22,5 @@ email_message = "Hello testing 123"
 mailing_list = ["pensiveeagle.dev@gmail.com"]
 
 # ---------- Send email ---------- #
-for receiver in mailing_list:
-    send_email( message = email_message, sender_addr = "pensiveeagle.dev@gmail.com", sender_pass = email_sender_pass, receiver_addr = receiver)
+# for receiver in mailing_list:
+#     send_email( message = email_message, sender_addr = "pensiveeagle.dev@gmail.com", sender_pass = email_sender_pass, receiver_addr = receiver)
