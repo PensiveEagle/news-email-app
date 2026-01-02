@@ -10,12 +10,12 @@ api_key = os.getenv( "API_KEY" )
 email_sender_pass = os.getenv( "GOOGLE_APP_PASSWORD" )
 
 # ---------- Set API query parameters ---------- #
-topic = "databricks"
+topic = "dinosaur"
 language = "en"
 articles = 20
 
 # ---------- Make API request ---------- #
-url = f"https://newsapi.org/v2/everything?q={topic}&from=2025-12-02&sortBy=publishedAt&language={language}&pageSize={articles}&apiKey={api_key}"
+url = f"https://newsapi.org/v2/everything?q={topic.replace(" ", "+")}&from=2025-12-02&sortBy=publishedAt&language={language}&pageSize={articles}&apiKey={api_key}"
 
 response = requests.get( url )
 content = response.json()
