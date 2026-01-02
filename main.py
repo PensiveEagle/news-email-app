@@ -20,7 +20,7 @@ response = requests.get( url )
 content = response.json()
 
 # ---------- Generate Email Message ---------- #
-email_message = ""
+email_message = "Subject: Today's News \n"
 
 for article in content["articles"]:
     if article["title"] is None or article["title"] == "":
