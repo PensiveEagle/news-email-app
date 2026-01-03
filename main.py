@@ -33,8 +33,8 @@ for article in content["articles"]:
 email_message = email_message.encode("utf-8")
 
 # ---------- Setup mailing list ---------- #
-mailing_list = ["pensiveeagle.dev@gmail.com"]
+mailing_list = ["<recipient-email-1>", "<recipient-email-2>"]
 
 # ---------- Send email ---------- #
 for receiver in mailing_list:
-    send_email( message = email_message, sender_addr = "pensiveeagle.dev@gmail.com", sender_pass = email_sender_pass, receiver_addr = receiver)
+    send_email( message = email_message, sender_addr = "<sender-email>", sender_pass = email_sender_pass, receiver_addr = receiver)
