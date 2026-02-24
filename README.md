@@ -15,7 +15,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/PensiveEagle">
-    <img src="https://raw.githubusercontent.com/PensiveEagle/repo-assets/869e68466915785fdc1c44c324f2d84de119e5f1/readme_assets/general_assets/pensiveeagle-logo.svg" alt="Pensive Eagle Logo" width="200" height="auto">
+    <img src="https://raw.githubusercontent.com/PensiveEagle/repo-assets/main/readme_assets/general_assets/pensiveeagle-logo-green.svg" alt="Pensive Eagle Logo" width="200" height="auto">
   </a>
 
 <h3 align="center">News Email App</h3>
